@@ -22,6 +22,7 @@ public class WorkDayCalendar {
     return new APeriod(increment);
   }
 
+  /* a small helper class */
   public class APeriod {
     int days;
     int hours;
@@ -99,6 +100,7 @@ public class WorkDayCalendar {
       int dayIncrementValue = 0;
       if ((workDay.getHourOfDay() > getWorkDayStop().getHourOfDay())
               || ((workDay.getHourOfDay() == getWorkDayStop().getHourOfDay()) && (workDay.getMinuteOfHour() > 0))) {
+
         //at or after end of day, add to next day
         dayIncrementValue = +1;
         //The hour is start of day + increment
